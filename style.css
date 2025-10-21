@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* === MATERIAL 3 COLOR SYSTEM === */
+:root {
+    --md-sys-color-primary: #FFD60A;
+    --md-sys-color-primary-container: rgba(255, 214, 10, 0.15);
+    --md-sys-color-surface: #001D3D;
+    --md-sys-color-surface-variant: #003566;
+    --md-sys-color-on-surface: #E6EDF3;
+    --md-sys-color-on-surface-variant: #8B949E;
+    --md-sys-color-outline: rgba(255, 255, 255, 0.08);
+    --md-sys-color-shadow: rgba(0, 0, 0, 0.4);
+    --md-sys-color-error: #FF4B5C;
+
+    --font-main: 'Inter', sans-serif;
+}
+
+/* === BASE LAYOUT === */
+[data-testid="stAppViewContainer"] {
+    background: radial-gradient(at 80% 20%, #001a33 0%, #000814 100%);
+    font-family: var(--font-main);
+    color: var(--md-sys-color-on-surface);
+    text-align: center;
+}
+
+[data-testid="block-container"] {
+    max-width: 1200px;
+    padding: 1.5rem;
+}
+
+/* === HEADINGS === */
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: var(--md-sys-color-primary);
+    text-shadow: 0 4px 16px rgba(255, 214, 10, 0.4);
+}
+
+h2, h3, h4 {
+    color: var(--md-sys-color-on-surface);
+    font-weight: 700;
+}
+[data-testid="stSubheader"] {
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 2rem;
+}
+p {
+    color: var(--md-sys-color-on-surface);
+}
+a, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* === SEARCH FORM INPUTS === */
+input[type="text"] {
+    border-radius: 12px !important;
+    border: 1px solid var(--md-sys-color-outline) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: var(--md-sys-color-on-surface) !important;
+    padding: 0.6rem 1rem !important;
+}
+input[type="text"]:focus {
+    border-color: var(--md-sys-color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(255, 214, 10, 0.25) !important;
+}
+
+/* === BUTTONS === */
+div[data-testid="stButton"] > button {
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-primary);
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(255, 214, 10, 0.1);
+}
+div[data-testid="stButton"] > button:hover {
+    background-color: rgba(255, 214, 10, 0.25);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 214, 10, 0.3);
+}
+
+/* === CARD STYLING === */
+.food-card {
+    background: linear-gradient(145deg, rgba(0,29,61,0.75), rgba(0,53,102,0.75));
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 28px;
+    box-shadow: 0 8px 24px var(--md-sys-color-shadow);
+    padding: 24px;
+    margin-bottom: 2rem;
+    transition: all 0.25s ease;
+}
+.food-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+}
+.food-card img {
+    border-radius: 16px;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.food-card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 8px;
+    color: var(--md-sys-color-primary);
+}
+.food-card p {
+    font-size: 1.1rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* === FAVORITES === */
+.favorites-container {
+    background: rgba(0, 29, 61, 0.6);
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 24px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+}
+.favorites-container h3 {
+    margin-bottom: 1.5rem;
+    color: var(--md-sys-color-primary);
+}
+.favorite-item {
+    display: block;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background-color: rgba(255,255,255,0.02);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    text-align: left;
+}
+.favorite-item:hover {
+    background-color: rgba(255,214,10,0.1);
+    transform: translateX(4px);
+}
+.favorite-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface);
+    margin: 0 0 4px 0;
+}
+.favorite-item p {
+    font-size: 0.9rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin: 0;
+}
+
+/* === RESPONSIVE === */
+@media (min-width: 992px) {
+    [data-testid="block-container"] { padding: 2rem; }
+    .food-card img { height: 380px; }
+}

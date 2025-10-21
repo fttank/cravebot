@@ -1,0 +1,15 @@
+Virtual Environment
+
+venv/
+.venv/
+env/
+.env
+
+Python cache
+
+pycache/
+*.pyc
+
+Streamlit
+
+.streamlit/secrets.toml

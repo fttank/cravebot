@@ -1,69 +1,40 @@
-CraveBot 🤖
-===========
+# 🍽️ Let's Eat Whatever — A Food Decision Helper
 
-CraveBot is a simple and modern, interactive web application designed to help users discover local restaurants in a fun, "swipe-right" interface. Built with Streamlit and powered by the Google Places API, it offers a dynamic way to find your next meal.
+## 📌 Overview  
+**Let's Eat Whatever** is a Python + Streamlit web app that solves the classic problem:  
+*"What should I eat today?"*
 
-✨ Features
-----------
+By connecting to the **Yelp Fusion API**, the app pulls restaurant data based on your location and preferred food categories, then suggests a randomized option to help indecisive foodies make a choice faster.
 
-*   **Interactive Swiping:** Like or pass on restaurants with a simple, engaging UI.
-    
-*   **Live Local Data:** Fetches real-time restaurant information using the Google Places API.
-    
-*   **"Crave List":** Save your favorite discoveries to a persistent list on the sidebar.
-    
-*   **Smart Randomizer:** Can't decide? Let CraveBot pick a random food category for you!
-    
-*   **Direct Google Maps Links:** Click on any restaurant to instantly open its location and details in Google Maps.
-    
-*   **Robust Image Fallbacks:** Ensures a great visual experience even when a restaurant is missing an official photo.
-    
-*   **Fully Responsive:** A beautiful, mobile-first design that works on any device.
-    
+## 🧰 Tech Stack  
+- 🐍 Python  
+- 🌐 Streamlit (Web UI)  
+- 📡 Yelp Fusion API  
+- 🧩 HTML/CSS (custom styling)  
 
-🛠️ Tech Stack
---------------
+## 🚀 Features  
+- ✅ User inputs city + food category  
+- ✅ Fetches restaurant data from Yelp API  
+- ✅ Random suggestion with name, rating, location, and review  
+- ✅ Custom styling for clean UI  
+- ✅ Potential to add geolocation support, maps, or filters
 
-*   **Framework:** Streamlit
-    
-*   **Language:** Python
-    
-*   **APIs:** Google Places API, Google Geocoding API
-    
-*   **Styling:** Custom CSS with a Material Design 3 inspired dark theme
-    
-*   **Libraries:** Requests
-    
+## 📸 Preview  
+*Coming Soon – Add a screenshot or GIF of the app interface here!*
 
-🚀 Getting Started
-------------------
+## 🧠 What I Learned  
+- How to authenticate and interact with external APIs  
+- Basic front-end styling with Streamlit and custom CSS  
+- Handling HTTP requests and JSON parsing  
+- Real-world problem solving via rapid prototyping
 
-Follow these instructions to get a local copy up and running.
+## 🛠️ Getting Started  
+```bash
+git clone https://github.com/fttank/LetsEatWhatever.git
+cd LetsEatWhatever
 
-### Prerequisites
+# Install dependencies
+pip install -r requirements.txt
 
-*   Python 3.8 or newer
-    
-*   A Google Cloud Platform account with the **Places API** and **Geocoding API** enabled.
-    
-
-### Installation
-
-1.  git clone \[https://github.com/fttank/cravebot.git\](https://github.com/fttank/cravebot.git)cd cravebot
-    
-2.  \# For Windowspython -m venv venv.\\venv\\Scripts\\activate# For macOS/Linuxpython3 -m venv venvsource venv/bin/activate
-    
-3.  pip install -r requirements.txt
-    
-4.  **Set up your API Key:**
-    
-    *   Create a folder in the root of the project called .streamlit.
-        
-    *   Inside that folder, create a file named secrets.toml.
-        
-    *   GOOGLE\_API\_KEY = "your\_actual\_api\_key\_here"
-        
-5.  streamlit run app.py
-    
-
-The application should now be running in your browser!
+# Run the app
+streamlit run app.py
